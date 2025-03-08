@@ -1,0 +1,211 @@
+
+
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: black; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #752995; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+    --nav-color: #212529; /* The default color of the main navmenu links */
+    --nav-hover-color: #752995; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #752995; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+
+/* Fonts */
+:root {
+    --default-font: "Smooch Sans", serif;
+    --heading-font:"Smooch Sans", serif;
+    --nav-font: "Inter", sans-serif;
+  }
+
+  :root {
+    scroll-behavior: smooth;
+  }
+
+
+/********** CSS **********/
+:root {
+    --primary: #00B98E;
+    --light: #F3F6F8;
+    --dark: #0E2E50;
+}
+
+/*** Service ***/
+.py-6{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.about{
+    background: radial-gradient(
+        circle at 90% 10%,
+        color-mix(in srgb, var(--accent-color), transparent 92%),
+        transparent 40%
+      );
+}
+.service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.service-item:hover {
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+
+.about .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 0.75rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .about .btn-primary:hover {
+    background-color: color-mix(in srgb, var(--accent-color), black 20%);
+    border-color: color-mix(in srgb, var(--accent-color), black 20%);
+  }
+  
+  .about .btn-link {
+    color: var(--heading-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .about .btn-link:hover {
+    color: var(--accent-color);
+  }
+  
+  .about .btn-link i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+
+ .text-color{
+    color: var(--accent-color);
+ }
+
+
+ /**hero */
+ 
+              .about-section {
+                position: relative;
+                width: 100%;
+                height: 60vh;
+                background: linear-gradient(to right, 
+                #e1dfd7,#752995);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #F3F6F8;
+                text-align: center;
+                overflow: hidden;
+              }
+        
+              .about-section h1 {
+                font-size: 3rem;
+                margin: 0;
+              }
+        
+              .nav-links {
+                top: 170px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 15px;
+              }
+        
+              .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: 1px;
+              }
+        
+              .slant {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 80px;
+                background:  linear-gradient(to right, 
+               #752995, #e1d9d7);;
+                transform: skewY(-3deg);
+                transform-origin: top left;
+              }
+ /*****drop-down*****/
+.faq-section{
+  justify-content: center;
+}
+ .faq-container {
+  width: 50%;
+  position: relative;
+  left: 28%;
+}
+.faq-item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.faq-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #752995;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
+.faq-title:hover {
+  background:#400e55;
+}
+.faq-title span {
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+.faq-title.active span {
+  transform: rotate(180deg);
+}
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 0 15px;
+  color: #333;
+  font-size: 0.95em;
+  line-height: 1.5;
+  transition: max-height 0.3s ease-in-out;
+}
+.faq-content.open {
+  max-height: 150px; /* Adjust this value based on the content */
+  padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-container {
+    width: 85%;
+    left: 9%;
+  }
+  .nav-links{
+    top:156px;
+  }
+ .ftco-section .rel{
+  width: 20%;
+ }
+
+}
